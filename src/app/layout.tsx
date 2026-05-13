@@ -1,3 +1,5 @@
+import ThemeToggle from "@/components/custom-ui/theme-toggle";
+import { ScrollSidebarToActive } from "@/components/scroll-sidebar-to-active";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
@@ -47,7 +49,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ScrollSidebarToActive />
           {children}
+          <div className="fixed bottom-2 right-4">
+            <ThemeToggle />
+          </div>
         </ThemeProvider>
       </body>
     </html>
