@@ -39,8 +39,8 @@ export function DocumentationTOC({ content }: DocumentationTOCProps) {
   if (items.length === 0) return null;
 
   return (
-    <aside className="w-64 shrink-0">
-      <Card className="backdrop-blur-xl">
+    <aside className="w-78 shrink-0 sticky top-4 self-start hidden xl:block">
+      <Card className="backdrop-blur-xl rounded-[24px]">
         <CardContent className="space-y-4">
           <button
             onClick={() => setExpanded(!expanded)}
@@ -61,10 +61,10 @@ export function DocumentationTOC({ content }: DocumentationTOCProps) {
                   key={item.id}
                   href={`#${item.id}`}
                   className={cn(
-                    "block rounded-xl py-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground",
-                    item.level === 2 && "pl-0 font-medium text-foreground",
-                    item.level === 3 && "pl-4",
-                    item.level >= 4 && "pl-8",
+                    "block rounded-xl p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground",
+                    item.level === 2 && "pl-0 font-medium text-foreground p-2!",
+                    item.level === 3 && "pl-4 p-2!",
+                    item.level >= 4 && "pl-8 p-2!",
                   )}
                 >
                   {item.text}

@@ -18,7 +18,7 @@ export function DocumentationNav({ currentSlug }: DocumentationNavProps) {
       : null;
 
   return (
-    <div className="grid gap-4 border-t border-border/70 py-8 md:grid-cols-2">
+    <div className="grid gap-6 border-t border-border/70 pt-8 md:grid-cols-2">
       {prevSection ? (
         <Link
           href={`/docs/${prevSection.slug}`}
