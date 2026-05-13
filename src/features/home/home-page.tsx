@@ -6,13 +6,13 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-background to-muted/50">
+    <main className="min-h-screen bg-linear-to-br from-background to-muted/50">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
         <div className="space-y-4 mb-16">
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
             Next.js Stack
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">
+            <span className="block text-transparent bg-clip-text bg-linear-to-r from-blue-500 to-cyan-500">
               Developer Documentation
             </span>
           </h1>

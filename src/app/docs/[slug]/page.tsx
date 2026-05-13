@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import { notFound } from "next/navigation";
 
-import { DocumentationLayout } from "@/features/documentation/components/documentation-layout";
 import { DocumentationNav } from "@/features/documentation/components/documentation-nav";
 import { MarkdownRenderer } from "@/features/documentation/components/markdown-renderer";
 import { getContentBySlug } from "@/features/documentation/data/content";
@@ -10,6 +9,7 @@ import {
   docSections,
   getSectionBySlug,
 } from "@/features/documentation/data/sections";
+import { DocumentationPage } from "@/features/documentation/documentation-page";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -50,7 +50,7 @@ export default async function DocPage({ params }: PageProps) {
   }
 
   return (
-    <DocumentationLayout
+    <DocumentationPage
       content={content}
       title={section.title}
       description={
@@ -62,6 +62,6 @@ export default async function DocPage({ params }: PageProps) {
     >
       <MarkdownRenderer content={content} />
       <DocumentationNav currentSlug={slug} />
-    </DocumentationLayout>
+    </DocumentationPage>
   );
 }

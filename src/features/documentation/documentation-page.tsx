@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 import { DocumentationTOC } from "@/features/documentation/components/documentation-toc";
-import { DocumentationSidebar } from "./documentation-sidebar";
+import { DocumentationSidebar } from "./components/documentation-sidebar";
 
 interface DocumentationLayoutProps {
   children: ReactNode;
@@ -11,7 +11,7 @@ interface DocumentationLayoutProps {
   sectionIndex: number;
 }
 
-export function DocumentationLayout({
+export function DocumentationPage({
   children,
   content,
   title,

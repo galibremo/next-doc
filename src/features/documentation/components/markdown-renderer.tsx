@@ -72,7 +72,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
     h6: createHeading(6),
     p: ({ children, ...props }: any) => (
       <p
-        className="text-[15px] leading-8 text-foreground/90 [&:not(:first-child)]:mt-6 mb-4"
+        className="text-[15px] leading-8 text-foreground/90 not-first:mt-6 mb-4"
         {...props}
       >
         {children}
@@ -116,7 +116,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         {children}
       </blockquote>
     ),
-    code: ({ children, className, ...props }: any) => {
+    code: ({ children, className }: any) => {
       const match = /language-(\w+)/.exec(className || "");
       const language = match ? match[1] : "text";
       const isInline = !className;
